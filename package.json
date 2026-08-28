@@ -1,12 +1,13 @@
 {
-  "name": "datadog-cro",
+  "name": "softtek-gtm",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:leftovers": "node scripts/check-leftovers.mjs"
   },
   "dependencies": {
     "geist": "^1.7.2",

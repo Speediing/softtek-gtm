@@ -55,9 +55,9 @@ export type StoryVisual =
     }
   | {
       kind: "live-transcript";
-      timestamp: string;
-      speaker: string;
-      quote: string;
+      status: string;
+      label: string;
+      note: string;
       signals: string[];
     }
   | {
@@ -71,7 +71,7 @@ export type StoryVisual =
       kind: "procurement-email";
       sender: string;
       subject: string;
-      questions: number;
+      status: string;
     }
   | {
       kind: "answers-found";

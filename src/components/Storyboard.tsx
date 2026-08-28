@@ -149,12 +149,12 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
         <div className="story-ui story-transcript-ui" aria-hidden>
           <header className="story-ui-bar">
             <strong>Live transcript</strong>
-            <span>{visual.timestamp}</span>
+            <span>{visual.status}</span>
           </header>
-          <blockquote>
-            <strong>{visual.speaker}</strong>
-            “{visual.quote}”
-          </blockquote>
+          <div className="story-transcript-note">
+            <strong>{visual.label}</strong>
+            {visual.note}
+          </div>
           <footer>
             {visual.signals.map((signal) => (
               <span key={signal}>{signal}</span>
@@ -182,7 +182,7 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
         <div className="story-ui story-email-ui" aria-hidden>
           <header className="story-ui-bar">
             <strong>Inbox</strong>
-            <span>5:27 AM</span>
+            <span>{visual.status}</span>
           </header>
           <div className="story-email-body">
             <span className="story-avatar">JH</span>
@@ -191,10 +191,7 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
               <small>{visual.subject}</small>
             </p>
           </div>
-          <footer>
-            <strong>{visual.questions}</strong>
-            questions need answers
-          </footer>
+          <footer>Product context needed</footer>
         </div>
       );
     case "answers-found":

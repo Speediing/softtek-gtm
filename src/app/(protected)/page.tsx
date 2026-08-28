@@ -2,6 +2,7 @@ import { CompareTable } from "@/components/CompareTable";
 import { HeroTelemetry } from "@/components/HeroTelemetry";
 import { JobSection } from "@/components/JobSection";
 import { QuoteWall } from "@/components/QuoteWall";
+import { RosterChart } from "@/components/RosterChart";
 import { SiteNav } from "@/components/SiteNav";
 import { JOBS } from "@/data/jobs";
 
@@ -23,12 +24,12 @@ export default function HomePage() {
           <HeroTelemetry />
           <section className="hero">
             <div>
-              <p className="eyebrow">A proactive agent for every Datadog rep</p>
-              <h1>The agents that work while your reps sell.</h1>
+              <p className="eyebrow">Background agents for Softtek sellers</p>
+              <h1>Agents that keep working after the meeting ends.</h1>
               <p className="hero-intro">
-                Grok Bot listens to calls, watches the inbox, and researches
-                accounts in the background. Work triggers it — not another
-                prompt.
+                Grok Bot can join a live review, prepare a sourced reply, or
+                turn a delivery signal into a draft. The work starts it. Your
+                team reviews before anything is sent.
               </p>
             </div>
           </section>
@@ -36,11 +37,11 @@ export default function HomePage() {
           <section className="usecase-framing">
             <p className="eyebrow">Three sample use cases</p>
             <h2>
-              Grok Bot gives every seller their own fleet of always-available
-              agent teammates. Anything your sellers do today can be done
-              through Grok Bot.
+              Grok Bot gives each Softtek seller and delivery lead a small
+              fleet of agents. Each agent has its own computer and picks up work
+              from a meeting, message, or account signal.
             </h2>
-            <p>These are three examples from millions — not the boundary.</p>
+            <p>Three examples. Start with the workload Softtek wants to prove.</p>
           </section>
 
           <div className="metric-grid">
@@ -59,6 +60,8 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+
+        <RosterChart />
 
         <div id="jobs">
           {JOBS.map((job) => (
@@ -79,11 +82,11 @@ export default function HomePage() {
 
       <footer className="site-footer">
         <div>
-          <p className="footer-title">Cursor for Datadog</p>
-          <p>Grok Bot for Datadog sales</p>
+          <p className="footer-title">Softtek x SpaceXAI</p>
+          <p>Grok Bot for Softtek sellers and delivery leads</p>
         </div>
         <address className="footer-contact">
-          <p>Datadog&apos;s existing Cursor contact</p>
+          <p>Softtek&apos;s Cursor contact</p>
           <strong>Madeline Ingleby</strong>
           <a href="mailto:madeline.ingleby@cursor.com">
             madeline.ingleby@cursor.com
