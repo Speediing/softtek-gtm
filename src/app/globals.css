@@ -362,7 +362,7 @@ button:active:not(:focus-visible),
   align-self: center;
   margin-top: 0;
   color: var(--muted);
-  font-size: calc(var(--dd-h) * 0.28);
+  font-size: calc(var(--brand-h) * 0.28);
   font-weight: 300;
   line-height: 1;
 }
@@ -5587,11 +5587,17 @@ button:active:not(:focus-visible),
 
 @media (max-width: 640px) {
   .nav-brand {
-    display: none;
+    display: flex;
   }
 
   .site-header {
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .header-actions a:not(:first-child) {
+    display: none;
   }
 
   .hero h1,

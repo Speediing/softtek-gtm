@@ -23,7 +23,9 @@ export function BotComputer({
   const beat = activeBeat(jobId, playback);
 
   const message = playback.current;
-  const sent = message ? Boolean(playback.sentDrafts[message.id]) : false;
+  const sent =
+    (message ? Boolean(playback.sentDrafts[message.id]) : false) ||
+    Object.values(playback.sentDrafts).some(Boolean);
 
   if (!beat) return null;
 

@@ -22,6 +22,8 @@ export function startHeroTelemetry(
     if (!navigator.gpu) return;
 
     try {
+      const adapter = await navigator.gpu.requestAdapter();
+      if (!adapter) return;
       gpu = await init();
     } catch {
       return;
