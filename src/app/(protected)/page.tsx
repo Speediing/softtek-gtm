@@ -1,4 +1,5 @@
 import { CompareTable } from "@/components/CompareTable";
+import { HeroDemo } from "@/components/HeroDemo";
 import { HeroTelemetry } from "@/components/HeroTelemetry";
 import { JobSection } from "@/components/JobSection";
 import { QuoteWall } from "@/components/QuoteWall";
@@ -22,43 +23,7 @@ export default function HomePage() {
       <div className="report">
         <div className="report-hero">
           <HeroTelemetry />
-          <section className="hero">
-            <div>
-              <p className="eyebrow">Background agents for Softtek sellers</p>
-              <h1>Agents that keep working after the meeting ends.</h1>
-              <p className="hero-intro">
-                Grok Bot can join a live review, prepare a sourced reply, or
-                turn a delivery signal into a draft. The work starts it. Your
-                team reviews before anything is sent.
-              </p>
-            </div>
-          </section>
-
-          <section className="usecase-framing">
-            <p className="eyebrow">Three sample use cases</p>
-            <h2>
-              Grok Bot gives each Softtek seller and delivery lead a small
-              fleet of agents. Each agent has its own computer and picks up work
-              from a meeting, message, or account signal.
-            </h2>
-            <p>Three examples. Start with the workload Softtek wants to prove.</p>
-          </section>
-
-          <div className="metric-grid">
-            {JOBS.map((job) => (
-              <a
-                key={job.id}
-                className="metric-card"
-                href={`#${job.id}`}
-              >
-                <div className="metric-card-top">
-                  <p>Sample {String(job.number).padStart(2, "0")}</p>
-                </div>
-                <h2>{job.title}</h2>
-                <p className="metric-trigger">Starts when {job.trigger.toLowerCase()}</p>
-              </a>
-            ))}
-          </div>
+          <HeroDemo />
         </div>
 
         <RosterChart />
